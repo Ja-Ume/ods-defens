@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>ODS Defenders · Defiende el planeta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- MENÚ PRINCIPAL -->
+  <section id="scr-menu" class="scr on">
+    <div class="menu-wrap">
+      <div class="logo">
+        <div class="wheel" id="wheel"></div>
+        <div class="globe">🌍</div>
+        <h1>ODS <span>DEFENDERS</span></h1>
+        <p>Defiende el planeta de los problemas que frenan los Objetivos de Desarrollo Sostenible</p>
+      </div>
+      <div class="prof" id="prof"></div>
+      <button class="btn big" id="b-play">▶ Jugar</button>
+      <button class="btn" id="b-alm">📖 Almanaque ODS</button>
+      <button class="btn" id="b-how">❓ Cómo se juega</button>
+      <div class="foot">17 torres · 12 mapas · 4 dificultades · 4 modos · 3 héroes</div>
+    </div>
+  </section>
+
+  <!-- SELECCIÓN DE MAPA -->
+  <section id="scr-maps" class="scr">
+    <div class="page">
+      <div class="top"><button class="back" data-back="scr-menu">⟵</button><h2>Elige un mapa</h2></div>
+      <div class="mapgrid" id="mapgrid"></div>
+    </div>
+  </section>
+
+  <!-- PREPARAR PARTIDA -->
+  <section id="scr-setup" class="scr">
+    <div class="page narrow">
+      <div class="top"><button class="back" data-back="scr-maps">⟵</button><h2>Prepara la partida</h2></div>
+      <div id="setup"></div>
+    </div>
+  </section>
+
+  <!-- ALMANAQUE -->
+  <section id="scr-alm" class="scr">
+    <div class="page narrow">
+      <div class="top"><button class="back" data-back="scr-menu">⟵</button><h2>Almanaque ODS</h2></div>
+      <div class="tabs"><button id="alm-t" class="on">Las 17 torres</button><button id="alm-e">Los problemas</button></div>
+      <div id="almlist"></div>
+    </div>
+  </section>
+
+  <!-- CÓMO SE JUEGA -->
+  <section id="scr-how" class="scr">
+    <div class="page narrow how">
+      <div class="top"><button class="back" data-back="scr-menu">⟵</button><h2>Cómo se juega</h2></div>
+      <div class="card">
+        <h3>🎯 Objetivo</h3>
+        <p>Los problemas que frenan los ODS (plásticos, contaminación, corrupción…) recorren el camino hacia la Tierra. Coloca torres ODS para detenerlos antes de que lleguen. Si llegan, pierdes vidas.</p>
+        <h3>🏗 Torres</h3>
+        <p>Toca una torre en el panel y luego el mapa para colocarla. Toca una torre colocada para mejorarla. Cada torre tiene <b>3 caminos de 5 mejoras</b>: puedes llevar un camino hasta el 5 y otro hasta el 2 (como en BTD6).</p>
+        <h3>🎯 Objetivos de ataque</h3>
+        <p>Cada torre puede apuntar al <b>primero</b>, al <b>último</b>, al <b>más cercano</b> o al <b>más fuerte</b>.</p>
+        <h3>🧩 Enemigos especiales</h3>
+        <p><b>Camuflados 👁</b>: solo los ven torres con detección. <b>Inmunes</b>: algunos enemigos ignoran explosiones, frío o ataques punzantes. <b>Regeneran 🌱</b> capas perdidas. <b>Blindados</b> tienen el doble de vida. Al caer, los enemigos grandes sueltan otros más pequeños.</p>
+        <h3>✨ Habilidades y héroe</h3>
+        <p>Las mejoras de nivel 4 y 5 dan <b>habilidades activas</b> (botones a la izquierda del mapa). Tu <b>héroe</b> sube de nivel con las rondas y desbloquea poderes. Los <b>poderes</b> (derecha) se usan una sola vez por partida.</p>
+        <h3>⌨ Atajos</h3>
+        <p>Espacio: empezar ronda / acelerar · Esc: cancelar · P: pausa · 1-9: habilidades · ⏩ cambia la velocidad · 🔁 inicia rondas solo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- JUEGO -->
+  <section id="scr-game" class="scr">
+    <div id="hud">
+      <div class="chip hv" id="chip-lives">❤️ <b id="h-lives">0</b></div>
+      <div class="chip hv" id="chip-money">💰 <b id="h-money">0</b></div>
+      <div class="chip hv">🌍 <b id="h-round">0</b></div>
+      <div class="sp"></div>
+      <button class="hb" id="h-play">▶</button>
+      <button class="hb" id="h-ff">⏩ x1</button>
+      <button class="hb" id="h-auto" title="Iniciar rondas automáticamente">🔁</button>
+      <button class="hb" id="h-pause">⏸</button>
+    </div>
+    <div id="main">
+      <div id="stage">
+        <canvas id="cv" width="960" height="640"></canvas>
+        <div id="abil"></div>
+        <div id="powers"></div>
+      </div>
+      <div id="side">
+        <div id="info"></div>
+        <div id="shop"></div>
+        <div id="upg"></div>
+      </div>
+    </div>
+    <div id="ov" class="ov"><div id="ovc" class="ovc"></div></div>
+  </section>
+</div>
+<script src="data.js"></script>
+<script src="render.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
