@@ -2,107 +2,206 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<title>ODS Defenders · Defiende el planeta</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#122a43">
+<meta name="description" content="ODS Defenders: aprende jugando a defender los Objetivos de Desarrollo Sostenible.">
+<title>ODS Defenders · Juega por un planeta mejor</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="portal.css">
 </head>
 <body>
 <div id="app">
-
-  <!-- MENÚ PRINCIPAL -->
   <section id="scr-menu" class="scr on">
-    <div class="menu-wrap">
-      <div class="logo">
-        <div class="wheel" id="wheel"></div>
-        <div class="globe">🌍</div>
-        <h1>ODS <span>DEFENDERS</span></h1>
-        <p>Defiende el planeta de los problemas que frenan los Objetivos de Desarrollo Sostenible</p>
-      </div>
-      <div class="prof" id="prof"></div>
-      <button class="btn big" id="b-play">▶ Jugar</button>
-      <button class="btn" id="b-alm">📖 Almanaque ODS</button>
-      <button class="btn" id="b-how">❓ Cómo se juega</button>
-      <div class="foot">17 torres · 12 mapas · 4 dificultades · 4 modos · 3 héroes</div>
+    <div class="home-shell">
+      <header class="site-header">
+        <a class="brand" href="#inicio" aria-label="ODS Defenders, inicio">
+          <span class="brand-mark">🌍</span>
+          <span class="brand-name">ODS <b>DEFENDERS</b><small>APRENDE · JUEGA · CAMBIA</small></span>
+        </a>
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="#juegos">Juegos</a><a href="#objetivos">Los 17 ODS</a><a href="#progreso">Mi progreso</a>
+        </nav>
+        <button class="nav-cta" id="b-mini">Explorar juegos <span>↗</span></button>
+      </header>
+      <main>
+        <section class="hero" id="inicio">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="live-dot"></span> UNA AVENTURA POR LA AGENDA 2030</div>
+            <h1>El planeta necesita<br>tu <em>mejor jugada.</em></h1>
+            <p class="hero-lead">Conviértete en defensor o defensora del planeta. Supera retos, descubre los 17 Objetivos de Desarrollo Sostenible y demuestra que cada decisión cuenta.</p>
+            <div class="hero-actions">
+              <button class="hero-primary" id="b-play">🛡️ Jugar ODS Defenders <span>→</span></button>
+              <a class="hero-secondary" href="#juegos">Ver todos los juegos <span>↓</span></a>
+            </div>
+            <div class="hero-proof"><span>✓ Sin registro</span><span>✓ Gratis y en tu navegador</span><span>✓ Aprende jugando</span></div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="art-sun"></div><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+            <div class="art-globe">🌍</div><div class="art-leaf leaf-one">🌿</div><div class="art-leaf leaf-two">🍃</div>
+            <div class="float-card float-top"><span class="float-icon">♻️</span><span><b>Residuo detectado</b><small>¡Activa la torre ODS 12!</small></span></div>
+            <div class="float-card float-bottom"><span class="float-icon shield">🛡️</span><span><b>Planeta protegido</b><small>+25 puntos de sostenibilidad</small></span></div>
+            <div class="art-badge">17<br><small>OBJETIVOS</small></div>
+          </div>
+        </section>
+        <section class="quick-facts" aria-label="Características del juego">
+          <div><b>17</b><span>objetivos globales</span></div><div><b>12</b><span>mapas para defender</span></div>
+          <div><b>4</b><span>minijuegos educativos</span></div><div><b>∞</b><span>formas de mejorar el mundo</span></div>
+        </section>
+        <section class="catalog-section" id="juegos">
+          <div class="section-heading">
+            <div><div class="eyebrow eyebrow-light">ELIGE TU MISIÓN</div><h2>¿A qué jugamos hoy?</h2><p>Cuatro formas diferentes de entrenar tus superpoderes sostenibles.</p></div>
+            <span class="section-stamp">🎮 PLAY & LEARN</span>
+          </div>
+          <div class="game-grid">
+            <article class="game-card game-card-featured">
+              <div class="card-art tower-art"><span class="art-orbit-small"></span><span class="card-emoji">🛡️</span><span class="mini-enemy enemy-one">🛢️</span><span class="mini-enemy enemy-two">💨</span><span class="art-caption">DEFENSA PLANETARIA</span></div>
+              <div class="game-card-body">
+                <div class="card-meta"><span class="badge badge-green">JUEGO PRINCIPAL</span><span>⏱ 10–30 min</span></div>
+                <h3>ODS Defenders</h3><p>Construye torres ODS, mejora tus defensas y frena las amenazas antes de que alcancen el planeta.</p>
+                <div class="card-tags"><span>Tower defense</span><span>Estrategia</span><span>12 mapas</span></div>
+                <button class="card-button button-green" id="b-play-card">Entrar en la partida <span>→</span></button>
+              </div>
+            </article>
+            <article class="game-card">
+              <div class="card-art quiz-art"><span class="card-emoji">🧠</span><span class="art-chip">¿LO SABÍAS?</span><span class="quiz-spark">✦</span></div>
+              <div class="game-card-body">
+                <div class="card-meta"><span class="badge badge-purple">CONOCIMIENTO</span><span>⏱ 3–5 min</span></div>
+                <h3>Reto ODS</h3><p>Responde preguntas rápidas sobre los 17 objetivos y consigue una racha de aciertos.</p>
+                <div class="card-tags"><span>Quiz</span><span>8 preguntas</span></div>
+                <button class="card-button button-purple" data-mini="quiz">Aceptar el reto <span>→</span></button>
+              </div>
+            </article>
+            <article class="game-card">
+              <div class="card-art recycle-art"><span class="card-emoji">♻️</span><span class="recycle-orbit">RECICLA<br>Y GANA</span><span class="recycle-item item-one">🥫</span><span class="recycle-item item-two">🍌</span></div>
+              <div class="game-card-body">
+                <div class="card-meta"><span class="badge badge-orange">ACCIÓN VERDE</span><span>⏱ 2–4 min</span></div>
+                <h3>Brigada del reciclaje</h3><p>Clasifica residuos en el contenedor correcto. ¡Cada objeto bien separado suma puntos!</p>
+                <div class="card-tags"><span>Clasificación</span><span>12 objetos</span></div>
+                <button class="card-button button-orange" data-mini="sort">Empezar a reciclar <span>→</span></button>
+              </div>
+            </article>
+            <article class="game-card">
+              <div class="card-art memory-art"><span class="card-emoji">🧩</span><div class="memory-pieces"><i>🌳</i><i>💧</i><i>☀️</i><i>🐠</i></div></div>
+              <div class="game-card-body">
+                <div class="card-meta"><span class="badge badge-blue">MEMORIA</span><span>⏱ 2–5 min</span></div>
+                <h3>Parejas sostenibles</h3><p>Encuentra las parejas de símbolos y conceptos ODS con el menor número de movimientos.</p>
+                <div class="card-tags"><span>Memory</span><span>6 parejas</span></div>
+                <button class="card-button button-blue" data-mini="memory">Jugar a las parejas <span>→</span></button>
+              </div>
+            </article>
+            <article class="game-card">
+              <div class="card-art defense-art"><span class="card-emoji">⚡</span><span class="defense-warning">¡ALERTA!</span><span class="defense-shield">🛡️</span></div>
+              <div class="game-card-body">
+                <div class="card-meta"><span class="badge badge-red">MODO DEFENSA</span><span>⏱ 3–6 min</span></div>
+                <h3>Defensa relámpago</h3><p>Identifica cada amenaza y elige qué torre ODS debe detenerla. Tienes tres escudos.</p>
+                <div class="card-tags"><span>Oleadas</span><span>10 amenazas</span></div>
+                <button class="card-button button-red" data-mini="defense">¡Proteger el planeta! <span>→</span></button>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="ods-section" id="objetivos">
+          <div class="ods-copy">
+            <div class="eyebrow eyebrow-light">UN PLANETA · UN FUTURO</div>
+            <h2>17 objetivos.<br><em>Un mismo equipo.</em></h2>
+            <p>Los Objetivos de Desarrollo Sostenible son un plan global para construir un mundo más justo, saludable y sostenible. Conócelos y conviértelos en tu estrategia ganadora.</p>
+            <button class="ods-link" id="b-alm">Descubrir el almanaque ODS <span>→</span></button>
+          </div>
+          <div class="ods-wheel" aria-label="Los 17 Objetivos de Desarrollo Sostenible">
+            <div class="ods-tile" style="--ods:#E5243B"><b>1</b><span>Fin de la pobreza</span></div>
+            <div class="ods-tile" style="--ods:#DDA63A"><b>2</b><span>Hambre cero</span></div>
+            <div class="ods-tile" style="--ods:#4C9F38"><b>3</b><span>Salud y bienestar</span></div>
+            <div class="ods-tile" style="--ods:#C5192D"><b>4</b><span>Educación</span></div>
+            <div class="ods-tile" style="--ods:#FF3A21"><b>5</b><span>Igualdad</span></div>
+            <div class="ods-tile" style="--ods:#26BDE2"><b>6</b><span>Agua limpia</span></div>
+            <div class="ods-tile" style="--ods:#FCC30B"><b>7</b><span>Energía limpia</span></div>
+            <div class="ods-tile" style="--ods:#A21942"><b>8</b><span>Trabajo digno</span></div>
+            <div class="ods-tile" style="--ods:#FD6925"><b>9</b><span>Innovación</span></div>
+            <div class="ods-tile" style="--ods:#DD1367"><b>10</b><span>Menos desigualdad</span></div>
+            <div class="ods-tile" style="--ods:#FD9D24"><b>11</b><span>Ciudades sostenibles</span></div>
+            <div class="ods-tile" style="--ods:#BF8B2E"><b>12</b><span>Consumo responsable</span></div>
+            <div class="ods-tile" style="--ods:#3F7E44"><b>13</b><span>Acción climática</span></div>
+            <div class="ods-tile" style="--ods:#0A97D9"><b>14</b><span>Vida submarina</span></div>
+            <div class="ods-tile" style="--ods:#56C02B"><b>15</b><span>Vida terrestre</span></div>
+            <div class="ods-tile" style="--ods:#00689D"><b>16</b><span>Paz y justicia</span></div>
+            <div class="ods-tile" style="--ods:#19486A"><b>17</b><span>Alianzas</span></div>
+          </div>
+        </section>
+        <section class="progress-section" id="progreso">
+          <div class="progress-copy"><div class="eyebrow eyebrow-light">CADA PARTIDA CUENTA</div><h2>Tu aventura también suma.</h2><p>Gana experiencia, sube de nivel y vuelve para superar tu propia marca. Tu progreso se guarda en este dispositivo.</p></div>
+          <div class="profile-panel">
+            <div class="profile-icon">🏆</div>
+            <div class="profile-details"><b>Tu progreso</b><div id="prof"></div></div>
+            <div class="profile-actions"><button class="profile-link" id="b-how">Cómo se juega</button><span>Tu próxima misión te espera.</span></div>
+          </div>
+        </section>
+      </main>
+      <footer class="site-footer">
+        <a class="brand footer-brand" href="#inicio"><span class="brand-mark">🌍</span><span class="brand-name">ODS <b>DEFENDERS</b><small>JUEGA POR UN MUNDO MEJOR</small></span></a>
+        <span>Hecho para aprender jugando · Agenda 2030</span><a href="#inicio">Volver arriba ↑</a>
+      </footer>
     </div>
   </section>
 
-  <!-- SELECCIÓN DE MAPA -->
   <section id="scr-maps" class="scr">
-    <div class="page">
-      <div class="top"><button class="back" data-back="scr-menu">⟵</button><h2>Elige un mapa</h2></div>
-      <div class="mapgrid" id="mapgrid"></div>
-    </div>
+    <div class="page"><div class="top"><button class="back" data-back="scr-menu">⟵</button><h2>Elige un mapa</h2></div><div class="mapgrid" id="mapgrid"></div></div>
   </section>
-
-  <!-- PREPARAR PARTIDA -->
   <section id="scr-setup" class="scr">
-    <div class="page narrow">
-      <div class="top"><button class="back" data-back="scr-maps">⟵</button><h2>Prepara la partida</h2></div>
-      <div id="setup"></div>
-    </div>
+    <div class="page narrow"><div class="top"><button class="back" data-back="scr-maps">⟵</button><h2>Prepara la partida</h2></div><div id="setup"></div></div>
   </section>
-
-  <!-- ALMANAQUE -->
   <section id="scr-alm" class="scr">
-    <div class="page narrow">
-      <div class="top"><button class="back" data-back="scr-menu">⟵</button><h2>Almanaque ODS</h2></div>
-      <div class="tabs"><button id="alm-t" class="on">Las 17 torres</button><button id="alm-e">Los problemas</button></div>
-      <div id="almlist"></div>
-    </div>
+    <div class="page narrow"><div class="top"><button class="back" data-back="scr-menu">⟵</button><h2>Almanaque ODS</h2></div><div class="tabs"><button id="alm-t" class="on">Las 17 torres</button><button id="alm-e">Los problemas</button></div><div id="almlist"></div></div>
   </section>
-
-  <!-- CÓMO SE JUEGA -->
   <section id="scr-how" class="scr">
     <div class="page narrow how">
       <div class="top"><button class="back" data-back="scr-menu">⟵</button><h2>Cómo se juega</h2></div>
       <div class="card">
-        <h3>🎯 Objetivo</h3>
-        <p>Los problemas que frenan los ODS (plásticos, contaminación, corrupción…) recorren el camino hacia la Tierra. Coloca torres ODS para detenerlos antes de que lleguen. Si llegan, pierdes vidas.</p>
-        <h3>🏗 Torres</h3>
-        <p>Toca una torre en el panel y luego el mapa para colocarla. Toca una torre colocada para mejorarla. Cada torre tiene <b>3 caminos de 5 mejoras</b>: puedes llevar un camino hasta el 5 y otro hasta el 2 (como en BTD6).</p>
-        <h3>🎯 Objetivos de ataque</h3>
-        <p>Cada torre puede apuntar al <b>primero</b>, al <b>último</b>, al <b>más cercano</b> o al <b>más fuerte</b>.</p>
-        <h3>🧩 Enemigos especiales</h3>
-        <p><b>Camuflados 👁</b>: solo los ven torres con detección. <b>Inmunes</b>: algunos enemigos ignoran explosiones, frío o ataques punzantes. <b>Regeneran 🌱</b> capas perdidas. <b>Blindados</b> tienen el doble de vida. Al caer, los enemigos grandes sueltan otros más pequeños.</p>
-        <h3>✨ Habilidades y héroe</h3>
-        <p>Las mejoras de nivel 4 y 5 dan <b>habilidades activas</b> (botones a la izquierda del mapa). Tu <b>héroe</b> sube de nivel con las rondas y desbloquea poderes. Los <b>poderes</b> (derecha) se usan una sola vez por partida.</p>
-        <h3>⌨ Atajos</h3>
-        <p>Espacio: empezar ronda / acelerar · Esc: cancelar · P: pausa · 1-9: habilidades · ⏩ cambia la velocidad · 🔁 inicia rondas solo.</p>
+        <h3>🎯 Objetivo</h3><p>Los problemas que frenan los ODS (plásticos, contaminación, corrupción…) recorren el camino hacia la Tierra. Coloca torres ODS para detenerlos antes de que lleguen. Si llegan, pierdes vidas.</p>
+        <h3>🏗 Torres</h3><p>Toca una torre en el panel y luego el mapa para colocarla. Toca una torre colocada para mejorarla. Cada torre tiene <b>3 caminos de 5 mejoras</b>: puedes llevar un camino hasta el 5 y otro hasta el 2 (como en BTD6).</p>
+        <h3>🎯 Objetivos de ataque</h3><p>Cada torre puede apuntar al <b>primero</b>, al <b>último</b>, al <b>más cercano</b> o al <b>más fuerte</b>.</p>
+        <h3>🧩 Enemigos especiales</h3><p><b>Camuflados 👁</b>: solo los ven torres con detección. <b>Inmunes</b>: algunos enemigos ignoran explosiones, frío o ataques punzantes. <b>Regeneran 🌱</b> capas perdidas. <b>Blindados</b> tienen el doble de vida. Al caer, los enemigos grandes sueltan otros más pequeños.</p>
+        <h3>✨ Habilidades y héroe</h3><p>Las mejoras de nivel 4 y 5 dan <b>habilidades activas</b> (botones a la izquierda del mapa). Tu <b>héroe</b> sube de nivel con las rondas y desbloquea poderes. Los <b>poderes</b> (derecha) se usan una sola vez por partida.</p>
+        <h3>⌨ Atajos</h3><p>Espacio: empezar ronda / acelerar · Esc: cancelar · P: pausa · 1-9: habilidades · ⏩ cambia la velocidad · 🔁 inicia rondas solo.</p>
       </div>
     </div>
   </section>
 
-  <!-- JUEGO -->
+  <section id="scr-mini" class="scr">
+    <div class="mini-page">
+      <div class="mini-top">
+        <button class="back" data-back="scr-menu" aria-label="Volver al inicio">⟵</button>
+        <a class="mini-brand" href="#" id="mini-home">🌍 ODS <b>DEFENDERS</b></a>
+        <span class="mini-top-label">CENTRO DE RETOS</span>
+      </div>
+      <div class="mini-heading">
+        <div class="eyebrow eyebrow-light" id="mini-eyebrow">MINIJUEGOS ODS</div>
+        <h2 id="mini-title">¡Una misión nueva te espera!</h2>
+        <p id="mini-description">Aprende, juega y suma puntos para proteger el planeta.</p>
+      </div>
+      <div class="mini-status" id="mini-status"></div>
+      <div id="mini-content" class="mini-content"></div>
+      <div class="mini-bottom"><span>🌱 Cada pequeño gesto suma.</span><button id="mini-catalogue">Cambiar de juego ↗</button></div>
+    </div>
+  </section>
+
   <section id="scr-game" class="scr">
     <div id="hud">
       <div class="chip hv" id="chip-lives">❤️ <b id="h-lives">0</b></div>
       <div class="chip hv" id="chip-money">💰 <b id="h-money">0</b></div>
       <div class="chip hv">🌍 <b id="h-round">0</b></div>
-      <div class="sp"></div>
-      <button class="hb" id="h-play">▶</button>
-      <button class="hb" id="h-ff">⏩ x1</button>
-      <button class="hb" id="h-auto" title="Iniciar rondas automáticamente">🔁</button>
-      <button class="hb" id="h-pause">⏸</button>
+      <div class="sp"></div><button class="hb" id="h-play">▶</button><button class="hb" id="h-ff">⏩ x1</button>
+      <button class="hb" id="h-auto" title="Iniciar rondas automáticamente">🔁</button><button class="hb" id="h-pause">⏸</button>
     </div>
     <div id="main">
-      <div id="stage">
-        <canvas id="cv" width="960" height="640"></canvas>
-        <div id="abil"></div>
-        <div id="powers"></div>
-      </div>
-      <div id="side">
-        <div id="info"></div>
-        <div id="shop"></div>
-        <div id="upg"></div>
-      </div>
+      <div id="stage"><canvas id="cv" width="960" height="640"></canvas><div id="abil"></div><div id="powers"></div></div>
+      <div id="side"><div id="info"></div><div id="shop"></div><div id="upg"></div></div>
     </div>
     <div id="ov" class="ov"><div id="ovc" class="ovc"></div></div>
   </section>
 </div>
-<script src="data.js"></script>
-<script src="render.js"></script>
-<script src="game.js"></script>
+<script src="data.js"></script><script src="render.js"></script><script src="game.js"></script><script src="minigames.js"></script>
 </body>
 </html>
